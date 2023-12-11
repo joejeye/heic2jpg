@@ -36,7 +36,7 @@ def batchConvert(input_dir: str, output_dir: str, quality) -> None:
     # Convert each heic file to the jpg file
     for file in file_list:
         input_img = os.path.join(input_dir, file)
-        output_img = os.path.join(output_dir, re.sub(r"[.]\w+", r".jpg", file))
+        output_img = os.path.join(output_dir, re.sub(r"[.]\w+$", r".jpg", file))
         convertOneImage(input_img, output_img, quality)
 
 
